@@ -63,7 +63,7 @@ function App() {
     <div className="App">
       <header className="App-view">
         <div className="row justify-content-center mx-0 pt-5">
-          <div className="light-box solution-panel col-4">
+          <div className="light-box solution-panel col-lg-4 col-md-5 col-6">
             <div>
               {colorMarkings.map((markings, index) => (
                 <div className="letter-box" key={index}>
@@ -86,7 +86,7 @@ function App() {
           </div>
         </div>
         <div className="row justify-content-center m-0">
-          <div className="col-6">
+          <div className="col-lg-7 col-md-9 col-sm-11">
             <Keyboard
               currentWord={currentWord}
               setCurrentWord={setCurrentWord}

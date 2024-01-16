@@ -95,7 +95,7 @@ function Keyboard({
       <div className="box-inner">
         <div className="key" onClick={() => handleDelete()}>
           <div className="key-content">
-            <i class="fa-solid fa-delete-left"></i>
+            <i className="fa-solid fa-delete-left"></i>
           </div>
         </div>
         <div className="key" onClick={() => handleClick("z")}>
@@ -121,7 +121,7 @@ function Keyboard({
         </div>
         <div className="key" onClick={() => handleEnter()}>
           <div className="key-content">
-            <i class="fa-regular fa-paper-plane"></i>
+            <i className="fa-regular fa-paper-plane"></i>
           </div>
         </div>
       </div>

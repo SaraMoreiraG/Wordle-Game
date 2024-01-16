@@ -40,5 +40,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "homepage": "https://saramoreirag.github.io/Wordle-Game",
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
   }
 }

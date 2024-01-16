@@ -319,6 +319,20 @@ a {
   transition: top 0.1s ease-in-out, box-shadow 0.1s ease-in-out, background-color 0.1s ease-in-out;
 }
 
+@supports (display: flex) {
+	/* @media (max-width: 992px) {
+		.key-content {
+			font-size: 2vmin;
+		}
+	} */
+
+	@media (max-width: 576px) {
+		.key-content {
+			font-size: 2.5vmin;
+		}
+	}
+}
+
 .key-content:active {
   top: 0vmin;
   box-shadow: 0 0.3vmin rgba(0, 0, 0, 0.6);
