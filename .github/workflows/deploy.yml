@@ -21,14 +21,14 @@ jobs:
     - name: Install dependencies
       run: npm install
 
+    - name: Configure Git user
+      run: |
+        git config user.email "sara_moreira@hotmail.es"
+        git config user.name "SaraMoreiraG"
+
     - name: Build and deploy
       run: |
         npm run build
         npx gh-pages -d build -t ${{ secrets.REACT_APP_API_KEY }}
       env:
         REACT_APP_API_KEY: ${{ secrets.REACT_APP_API_KEY }}
-
-    - name: Configure Git user
-      run: |
-        git config user.email "sara_moreira@hotmail.es"
-        git config user.name "SaraMoreiraG"
