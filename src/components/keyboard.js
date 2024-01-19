@@ -1,14 +1,26 @@
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-regular-svg-icons";
+
+/**
+ * Keyboard Component
+ * @param {Object} props - The properties passed to the component.
+ * @param {string} props.currentWord - The current word being input.
+ * @param {function} props.setCurrentWord - Function to set the current word.
+ * @param {function} props.handleEnter - Function to handle Enter key press.
+ * @param {function} props.setInstructions - Function to set instructions.
+ */
 
 function Keyboard({
   currentWord,
   setCurrentWord,
-  evaluateSituation,
+  handleEnter,
   setInstructions,
 }) {
+  // Maximum allowed letters per word
   const maxLettersPerWord = 5;
 
+  // Handle click event for each keyboard button.
   const handleClick = (letter) => {
     if (currentWord.length < maxLettersPerWord) {
       setCurrentWord(
@@ -19,10 +31,7 @@ function Keyboard({
     }
   };
 
-  const handleEnter = () => {
-    evaluateSituation();
-  };
-
+  // Handle delete (backspace) event.
   const handleDelete = () => {
     if (currentWord.length > 0) {
       setCurrentWord((prevCurrentWord) => prevCurrentWord.slice(0, -1));
@@ -91,6 +100,11 @@ function Keyboard({
         <div className="key" onClick={() => handleClick("l")}>
           <div className="key-content">L</div>
         </div>
+        <div className="key" onClick={() => handleDelete()}>
+          <div className="key-content">
+            <i className="fa-solid fa-delete-left"></i>
+          </div>
+        </div>
       </div>
       <div className="box-inner">
         <div className="key" onClick={() => handleDelete()}>
@@ -118,6 +132,9 @@ function Keyboard({
         </div>
         <div className="key" onClick={() => handleClick("m")}>
           <div className="key-content">M</div>
+        </div>
+        <div className="key">
+          <div className="key-content">?</div>
         </div>
         <div className="key" onClick={() => handleEnter()}>
           <div className="key-content">

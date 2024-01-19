@@ -1,13 +1,6 @@
+/* Global styles for the entire app */
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-view {
   background-color: #0b0b0b;
   min-height: 100vh;
   align-items: center;
@@ -16,6 +9,7 @@
   color: white;
 }
 
+/* Styles for anchor and paragraph elements */
 a,
 p {
   position: absolute;
@@ -26,17 +20,19 @@ p {
   text-decoration: none;
 }
 
+/* Specific styling for paragraphs */
 p {
   color: #efefef;
   font-size: 2vmin;
-
 }
 
+/* Specific styling for anchor elements */
 a {
   color: #3a3a3a;
   font-size: 1.7vmin;
 }
 
+/* Styles for the light-box container */
 .light-box {
   --radius: 4vmin;
   background-color: #111;
@@ -48,17 +44,20 @@ a {
   margin: 0 0 60px 0;
 }
 
+/* Styles for the solution panel */
 .solution-panel {
   display: flex;
   justify-content: center;
 }
 
+/* Styles for the keyboard container */
 .keyboard {
   --red: rgb(255, 100, 100);
   --green: rgb(100, 200, 100);
   --blue: rgb(100, 100, 255);
 }
 
+/* Styles for the inner box and letter box */
 .box-inner,
 .letter-box {
   display: flex;
@@ -71,11 +70,29 @@ a {
   box-shadow: 0 0.5vmin #111 inset;
 }
 
+/* Styles for the letter box */
 .letter-box {
   min-height: 9vmin;
   width: 45vmin;
 }
 
+/* Styles for the languages box */
+.languages-box {
+  display: flex;
+}
+
+/* Styles for individual language elements */
+.language {
+  border-radius: 10px;
+  margin: 3px;
+}
+
+/* Hover effect for language elements */
+.language:hover {
+  cursor: pointer;
+}
+
+/* Styles for individual letter elements */
 .letter {
   width: 8vmin;
   height: 7vmin;
@@ -85,11 +102,13 @@ a {
   border-radius: calc(var(--radius) * 0.5);
 }
 
+/* Styles for different colored letters */
 .letter.red {
   border: 2px solid rgb(200, 100, 100);
 }
 
-.letter.green {
+.letter.green,
+.language.green {
   border: 2px solid rgb(100, 200, 100);
 }
 
@@ -101,6 +120,7 @@ a {
   border: 2px solid rgb(200, 200, 100);
 }
 
+/* Styles for the key elements */
 .key {
   width: 10vmin;
   height: 9vmin;
@@ -114,6 +134,7 @@ a {
   animation: shadow 5s -0.5s linear infinite;
   --delay: 0;
 }
+
 
 /* keyboard gradient effect */
 
@@ -263,8 +284,7 @@ a {
   }
 }
 
-.key:before,
-.letter:before {
+.key:before {
   content: "";
   width: 400vmin;
   height: 400vmin;
@@ -320,17 +340,17 @@ a {
 }
 
 @supports (display: flex) {
-	/* @media (max-width: 992px) {
+  /* @media (max-width: 992px) {
 		.key-content {
 			font-size: 2vmin;
 		}
 	} */
 
-	@media (max-width: 576px) {
-		.key-content {
-			font-size: 2.5vmin;
-		}
-	}
+  @media (max-width: 576px) {
+    .key-content {
+      font-size: 2.5vmin;
+    }
+  }
 }
 
 .key-content:active {
